@@ -1,0 +1,10 @@
+// Return 13 ArgNumMismatch - Semantic Error at Line 8: Function arguments not matched
+
+int f (int i) {
+    return i;
+}
+
+int main () {
+    int a = f(1,2);
+    return 0;
+}

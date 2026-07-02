@@ -1,0 +1,7 @@
+// Return 5 InvalidOperands - Semantic Error at Line 6: invalid argument type 'int *' to unary expression
+
+int main() {
+    int a[3];
+    int b = -a;
+    return 0;
+}

@@ -1,0 +1,160 @@
+// Input: 4 4 1 2 100 2 4 200 2 3 250 3 4 100
+// Output: 450 1 2 3 4
+
+// second shortest path problem using dijkstra algorithm
+
+int m, n;   // m nodes and n edges
+
+int last[10], next[10], to[10], w[10];
+int cnt = 0;
+void add_edge(int u, int v, int weight) {
+    cnt = cnt + 1;
+    next[cnt] = last[u];
+    last[u] = cnt;
+    to[cnt] = v;
+    w[cnt] = weight;
+}
+
+// min heap
+int h_node[20], h_dis[20], h_flag[20];   // h_flag = 0: shortest, 1: second shortest
+int size = 0;
+void push(int x, int d, int f) {
+    size = size + 1;
+    h_node[size] = x;
+    h_dis[size] = d;
+    h_flag[size] = f;
+    int p = size;
+    int not_break = 1;
+    while (p > 1 && not_break) {
+        if (h_dis[p] < h_dis[p / 2]) {
+            int tmp = h_node[p];
+            h_node[p] = h_node[p / 2];
+            h_node[p / 2] = tmp;
+            tmp = h_dis[p];
+            h_dis[p] = h_dis[p / 2];
+            h_dis[p / 2] = tmp;
+            tmp = h_flag[p];
+            h_flag[p] = h_flag[p / 2];
+            h_flag[p / 2] = tmp;
+            p = p / 2;
+        } else {
+            not_break = 0;
+        }
+    }
+}
+
+// return the index of the minimum element
+int pop() {
+    int tmp = h_node[1];
+    h_node[1] = h_node[size];
+    h_node[size] = tmp;
+    tmp = h_dis[1];
+    h_dis[1] = h_dis[size];
+    h_dis[size] = tmp;
+    tmp = h_flag[1];
+    h_flag[1] = h_flag[size];
+    h_flag[size] = tmp;
+    size = size - 1;
+    int p = 1;
+    int not_break = 1;
+    while (not_break) {
+        int child = p * 2;
+        if (child > size) {
+            not_break = 0;
+        } else {
+            if (child != size && h_dis[child + 1] < h_dis[child]) {
+                child = child + 1;
+            }
+            if (h_dis[child] < h_dis[p]) {
+                int tmp = h_node[p];
+                h_node[p] = h_node[child];
+                h_node[child] = tmp;
+                tmp = h_dis[p];
+                h_dis[p] = h_dis[child];
+                h_dis[child] = tmp;
+                tmp = h_flag[p];
+                h_flag[p] = h_flag[child];
+                h_flag[child] = tmp;
+                p = child;
+            } else {
+                not_break = 0;
+            }
+        }
+    }
+    return size + 1;
+}
+
+int dis[10][2], vis[10][2], pre[10][2];
+void dijkstra() {
+    int i;
+    i = 1;
+    while (i <= m) {
+        dis[i][0] = 0x3f3f3f3f;
+        dis[i][1] = 0x3f3f3f3f;
+        vis[i][0] = 0;
+        vis[i][1] = 0;
+        i = i + 1;
+    }
+    dis[1][0] = 0;
+    push(1, 0, 0);
+    while (size) {
+        int u = h_node[1];
+        int d = h_dis[1];
+        int f = h_flag[1];
+        pop();
+        if (!vis[u][f]) {
+            vis[u][f] = 1;
+            i = last[u];
+            while (i) {
+                int v = to[i];
+                int weight = w[i];
+                if (d + weight < dis[v][0]) {
+                    dis[v][1] = dis[v][0];
+                    pre[v][1] = -pre[v][0];
+                    dis[v][0] = d + weight;
+                    pre[v][0] = u;
+                    push(v, dis[v][0], 0);
+                    push(v, dis[v][1], 1);
+                } else if (d + weight < dis[v][1] && d + weight != dis[v][0]) {
+                    dis[v][1] = d + weight;
+                    if (f) pre[v][1] = u;
+                    else pre[v][1] = -u;
+                    push(v, dis[v][1], 1);
+                }
+                i = next[i];
+            }
+        }
+    }
+}
+
+void print_path(int p, int f) {
+    if (p < 0) {
+        print_path(pre[-p][0], 0);
+        write(-p);
+    } else if (p > 0) {
+        print_path(pre[p][f], f);
+        write(p);
+    }
+}
+
+int main() {
+    m = read();
+    n = read();
+    int i = 0;
+    while (i < n) {
+        int u = read();
+        int v = read();
+        int weight = read();
+        add_edge(u, v, weight);
+        add_edge(v, u, weight);
+        i = i + 1;
+    }
+    dijkstra();
+    if (dis[m][1] >= 0x3f3f3f3f) {
+        write(-1);
+    } else {
+        write(dis[m][1]);
+        print_path(m, 1);
+    }
+    return 0;
+}

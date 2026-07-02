@@ -1,0 +1,18 @@
+// Input: None
+// Output: 18 180
+
+int foo(int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9, int a10) {
+    return a10 + a8;
+}
+
+int fun(int a1, int a2, int a3, int a4, int a5, int a6, int a7, int a8, int a9, int a10) {
+    int res = foo(10, 20, 30, 40, 50, 60, 70, 80, 90, 100);
+    write(a10 + a8);
+    return res;
+}
+
+int main() {
+    int b = fun(1,2,3,4,5,6,7,8,9,10);
+    write(b);
+    return 0;
+}

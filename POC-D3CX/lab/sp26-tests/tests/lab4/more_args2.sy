@@ -1,0 +1,27 @@
+// Input: None
+// Output: 15 19
+
+int globalArr1[5] = {1, 2, 3, 4, 5};
+int globalArr2[3] = {6, 7, 8};
+int globalVar = 10;
+
+int func2(int a1, int a2, int a3, int a4, int a5, int a6, int a7,
+        int globalArr[], int localArr[], int GlobalVar) {
+    return globalArr[0] + localArr[1] + GlobalVar; // 1+8+10=19
+}
+
+int func1(int a1, int a2, int a3, int a4, int a5, int a6, int a7,
+        int globalArr[], int localArr[], int GlobalVar) {
+    int res = func2(a1, a2, a3, a4, a5, a6, a7, globalArr, localArr, GlobalVar);
+
+    write(globalArr2[0] + localArr[0]); // 6+9=15
+    return res;
+}
+
+int main() {
+    int localArr[4] = {9, 8, 7, 6};
+    int b = func1(1, 2, 3, 4, 5, 6, 7, globalArr1, localArr, globalVar);
+
+    write(b); // 输出19
+    return 0;
+}

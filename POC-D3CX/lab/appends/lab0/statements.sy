@@ -1,0 +1,56 @@
+// Input: 5
+// Output: 8 3 100 7 3 210
+
+int globalArr[2][3] = {{1, 2, 3}, {4, 5, 6}};
+int globalX = 100;
+
+int main() {
+    int a = read(), b = 3, c;
+
+    // Assignment statement
+    c = a + b;
+
+    // Empty statement
+    ;
+
+    // Expression statement (function call as Exp statement)
+    write(c);
+
+    // Block statement with variable shadowing
+    {
+        int b = 10;
+        int a = b - 7;
+        write(a);
+    }
+
+    // If without else
+    if (a > 0)
+        write(globalX);
+
+    // If with else
+    if (a > 100) {
+        write(0);
+    } else {
+        int d = a + 2;
+        write(d);
+    }
+
+    // While with nested if-else
+    int sum = 0;
+    int i = 1;
+    while (i <= a) {
+        if (i % 2 == 0)
+            ;
+        else
+            sum = sum + 1;
+        i = i + 1;
+    }
+    write(sum);
+
+    // Array init with empty braces (all zeros) and flat init
+    int zeros[3] = {};
+    int flat[2][3] = {10, 20, 30, 40, 50, 60};
+    write(flat[0][0] + flat[0][1] + flat[0][2] + flat[1][0] + flat[1][1] + flat[1][2]);
+
+    return 0;
+}

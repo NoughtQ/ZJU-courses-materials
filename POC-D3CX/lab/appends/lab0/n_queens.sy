@@ -1,0 +1,37 @@
+// Input: 8
+// Output: 92
+
+int n;
+int col[20];
+int diag1[40];
+int diag2[40];
+int count;
+
+void solve(int row) {
+    if (row == n) {
+        count = count + 1;
+        return;
+    }
+    int j = 0;
+    while (j < n) {
+        if (!col[j] && !diag1[row + j] && !diag2[row - j + n]) {
+            col[j] = 1;
+            diag1[row + j] = 1;
+            diag2[row - j + n] = 1;
+            solve(row + 1);
+            col[j] = 0;
+            diag1[row + j] = 0;
+            diag2[row - j + n] = 0;
+        }
+        j = j + 1;
+    }
+    return;
+}
+
+int main() {
+    n = read();
+    count = 0;
+    solve(0);
+    write(count);
+    return 0;
+}

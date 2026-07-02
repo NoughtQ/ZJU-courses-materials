@@ -1,0 +1,6 @@
+// Return 10 Undeclared - Semantic Error at Line 4: 'a' is not defined
+
+int main() {
+    write(a);
+    return 0;
+}

@@ -1,0 +1,19 @@
+// Input: 10 5 20 5
+// Output: 4 2
+
+void fundiv() {
+  int a, b;
+  a = read();
+  b = read();
+  write(a / b);
+  return;
+}
+
+int main() {
+  int a, b;
+  a = read();
+  b = read();
+  fundiv();
+  write(a / b);
+  return 0;
+}

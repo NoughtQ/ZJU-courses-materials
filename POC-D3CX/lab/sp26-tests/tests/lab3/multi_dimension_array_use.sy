@@ -1,0 +1,18 @@
+//Input: None
+//Output: 0 1 2 3
+
+int main(){
+    // test multi-dimension array use
+    int a[4][2] = {};
+    int i = 1;
+    int j = 1;
+    a[0][0] = 0;
+    a[0][j] = 1;
+    a[i][0] = 2;
+    a[i][j] = 3;
+    write(a[0][0]);
+    write(a[0][j]);
+    write(a[i][0]);
+    write(a[i][j]);
+    return 0;
+}

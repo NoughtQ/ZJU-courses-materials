@@ -1,0 +1,5 @@
+// test multiple variable and array initializations in a single statement
+int main() {
+    int a = 1, b = 2, c[3] = {3, 4, 5}, d = 6, e[2] = {7, 8};
+    return 0;
+}

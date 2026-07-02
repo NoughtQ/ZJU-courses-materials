@@ -1,0 +1,5 @@
+// Return 1 - Syntax Error Line 3: Argument type is not a valid type
+
+int f(void a) { return 0; }
+
+int main() { return 0; }

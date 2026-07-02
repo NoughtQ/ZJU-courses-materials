@@ -1,0 +1,24 @@
+// Input: None
+// Output: 4 2024 1 1 4 5 0 0 1 0 0 4 0 0
+
+int a;
+int b[2];
+int c[4][3] = {1, 1, 4, {5}, {1}, {4}};
+int i = 2024;
+
+int main() {
+
+    while (a < 2) {
+        b[a] = a * 2;
+        a = a + 1;
+    }
+    write(a + b[0] + b[1]);
+    write(i);
+    int i = 0;
+    while (i < 12) {
+        write(c[i / 3][i % 3]);
+        i = i + 1;
+    }
+
+    return 0;
+}

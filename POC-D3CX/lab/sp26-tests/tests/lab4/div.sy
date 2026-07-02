@@ -1,0 +1,10 @@
+// Input: 10 5
+// Output: 2
+
+int main() {
+  int a, b;
+  a = read();
+  b = read();
+  write(a / b);
+  return 0;
+}

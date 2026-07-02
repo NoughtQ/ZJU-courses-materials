@@ -1,0 +1,10 @@
+// test for octal and hexadecimal
+int main(){
+    int a;
+    a = 0234;
+    a = 0x12;
+    a = 0x1ab;
+    a = 0X12;
+    a = 0X9ab;
+    return 0;
+}

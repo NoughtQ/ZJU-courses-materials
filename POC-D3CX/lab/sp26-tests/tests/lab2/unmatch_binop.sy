@@ -1,0 +1,8 @@
+// Return 5 InvalidOperands - Semantic Error at Line 6: invalid operands to binary expression ('int' and 'int[5]')
+
+int main() {
+    int a = 1;
+    int b[5];
+    a * b;
+    return 0;
+}

@@ -1,0 +1,5 @@
+// Return 1 - Syntax Error Line 3 "*/*/"
+int main(){
+    /* ops */*/
+    return 0;
+}

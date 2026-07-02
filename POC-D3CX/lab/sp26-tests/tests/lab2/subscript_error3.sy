@@ -1,0 +1,8 @@
+// Return 8 NotIntegerSubscript - Semantic Error at Line 6: array subscript is not an integer
+
+int main() {
+    int a[5];
+    int b[5];
+    a[b];
+    return 0;
+}

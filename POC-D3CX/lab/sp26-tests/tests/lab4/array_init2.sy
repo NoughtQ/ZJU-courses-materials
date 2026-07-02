@@ -1,0 +1,27 @@
+// Input: None
+// Output: 1 2 3 4 5 6 7 8 1 2 3 4 5 6 7 8 1 2 3 4 5 6 7 8
+
+void print_array(int a[][2]) {
+  int i = 0;
+  while (i < 4) {
+    int j = 0;
+    while (j < 2) {
+      write(a[i][j]);
+      j = j + 1;
+    }
+    i = i + 1;
+  }
+  return;
+}
+
+int main() {
+  int b[4][2] = {1, 2, 3, 4, 5, 6, 7, 8};
+  int c[4][2] = {{1, 2}, {3, 4}, {5, 6}, {7, 8}};
+  int d[4][2] = {1, 2, {3}, {5}, 7, 8};
+  d[1][1] = 4;
+  d[2][1] = 6;
+  print_array(b);
+  print_array(c);
+  print_array(d);
+  return 0;
+}

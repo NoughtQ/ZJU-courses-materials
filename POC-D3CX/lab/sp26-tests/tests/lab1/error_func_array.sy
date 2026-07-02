@@ -1,0 +1,15 @@
+// Return 1 - Syntax Error Line 3: the first dimension of the array must be omitted
+
+int f(int array[2][2][2]) {
+  int a = array[0][0];
+  int b = array[0][1];
+
+  return (a+b);
+}
+
+int main(){
+  int array[2][2][2] = {1, 2, 3, 4, 5, 6, 7, 8};
+
+  write(f(array[2][2][2]));
+  return 0;
+}

@@ -1,0 +1,9 @@
+// Return 10 Undeclared - Semantic Error at Line 6: Use undefined variable 'b' to initial Var 'a'
+
+int main(){
+    int a;
+    a = 10;
+    int result = b; 
+    write(result);
+    return 0;
+}

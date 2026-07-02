@@ -1,0 +1,13 @@
+// Input: None
+// Output: 16773120
+
+int main(){
+
+    int a = 1;
+    a = a + 0xfff;
+    a = a * 0xfff;
+
+    write(a);
+
+    return 0;
+}

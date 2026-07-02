@@ -1,0 +1,19 @@
+// Input: None
+// Output: 10
+
+int add(int array[]) {
+    array[0] = array[0] + 1;
+    return 1;
+}
+
+int main() {
+    int a = 10;
+    int array[10];
+    array[0] = 10;
+    if (a == 10 || add(array)) {
+        write(array[0]);
+    } else {
+        write(array[0]);
+    }
+    return 0;
+}

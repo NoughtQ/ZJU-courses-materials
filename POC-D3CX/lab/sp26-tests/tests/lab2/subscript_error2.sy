@@ -1,0 +1,7 @@
+// Return 6 NotSubscriptable - Semantic Error at Line 5: Excess indices in array subscript
+
+int main() {
+    int a[5];
+    a[0][0];
+    return 0;
+}

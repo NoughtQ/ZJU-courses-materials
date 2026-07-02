@@ -1,0 +1,3 @@
+// Return 7 ReturnMismatch - Semantic Error at Line 3: Return type mismatch
+
+int main() { return; }

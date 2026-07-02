@@ -1,0 +1,21 @@
+// Input: None
+// Output: 4352
+
+int test_large_local_array() {
+    int a[5050];
+    int b[5050];
+    b[5010] = 0xff;
+    a[5010] = 1;
+    return a[5010] + b[5010];
+}
+
+int main(){
+
+    int a[5050];
+    int b[5050];
+    b[5000] = 0xfff;
+    a[5000] = 1;
+    write(a[5000] + b[5000] + test_large_local_array());
+
+    return 0;
+}

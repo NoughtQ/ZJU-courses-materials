@@ -1,0 +1,7 @@
+// Return 10 Undeclared - Semantic Error at Line 5: 'f' is not defined
+
+int main() {
+    int a = 1;
+    f(a);
+    return 0;
+}

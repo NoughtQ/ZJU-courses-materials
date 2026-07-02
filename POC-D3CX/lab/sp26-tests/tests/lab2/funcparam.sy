@@ -1,0 +1,10 @@
+// to check different func param type
+
+int a(int b[], int c[][2], int e){
+    return 0;
+}
+
+int main(){
+    int p[3][2];
+    return a(p[0],p,p[0][1]);
+}

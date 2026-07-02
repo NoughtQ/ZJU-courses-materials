@@ -1,0 +1,6 @@
+// Return 7 ReturnMismatch - Semantic Error at Line 4: Return type mismatch
+int f(){ 
+    int a[10][10];
+    return a;
+}
+int main() { return 0; }

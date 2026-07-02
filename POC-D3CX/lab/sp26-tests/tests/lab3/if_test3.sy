@@ -1,0 +1,16 @@
+// Input: None
+// Output: 6
+
+int main(){
+    
+  int a, b = 2, c = -1;
+  a = 1;
+  if (a + b) 
+    a = 3;
+  if (-c) {
+    b = 4;
+  }
+  write(a + b + c);
+
+  return 0;
+}

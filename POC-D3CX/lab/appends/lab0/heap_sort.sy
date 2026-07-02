@@ -1,0 +1,82 @@
+// Input: 8 6 3 8 1 5 2 7 4
+// Output: 1 2 3 4 5 6 7 8
+
+int arr[100];
+int n;
+
+void swap(int i, int j) {
+    int temp = arr[i];
+    arr[i] = arr[j];
+    arr[j] = temp;
+    return;
+}
+
+void heapify(int size, int root) {
+    int largest = root;
+    int left = 2 * root + 1;
+    int right = 2 * root + 2;
+
+    if (left < size) {
+        if (arr[left] > arr[largest]) {
+            largest = left;
+        }
+    }
+
+    if (right < size) {
+        if (arr[right] > arr[largest]) {
+            largest = right;
+        }
+    }
+
+    if (largest != root) {
+        swap(root, largest);
+        heapify(size, largest);
+    }
+    return;
+}
+
+void buildHeap() {
+    int i = n / 2 - 1;
+    while (i >= 0) {
+        heapify(n, i);
+        i = i - 1;
+    }
+    return;
+}
+
+void heapsort() {
+    buildHeap();
+    int i = n - 1;
+    while (i > 0) {
+        swap(0, i);
+        heapify(i, 0);
+        i = i - 1;
+    }
+    return;
+}
+
+void readArray() {
+    int i = 0;
+    while (i < n) {
+        arr[i] = read();
+        i = i + 1;
+    }
+    return;
+}
+
+void printArray() {
+    int i = 0;
+    while (i < n) {
+        write(arr[i]);
+        i = i + 1;
+    }
+    return;
+}
+
+int main() {
+    n = read();
+    readArray();
+    heapsort();
+    printArray();
+    return 0;
+}

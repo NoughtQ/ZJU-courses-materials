@@ -1,0 +1,73 @@
+// Input: 3 1 2 3
+// Output: 14 6 3 20 7
+
+int globalVal;
+
+int add(int x, int y) {
+    return x + y;
+}
+
+int multiply(int x, int y, int z) {
+    return x * y * z;
+}
+
+void setGlobal(int val) {
+    globalVal = val;
+    return;
+}
+
+int sumArray(int a[], int size) {
+    int s = 0;
+    int i = 0;
+    while (i < size) {
+        s = s + a[i];
+        i = i + 1;
+    }
+    return s;
+}
+
+int getElement(int mat[][3], int r, int c) {
+    return mat[r][c];
+}
+
+int noParam() {
+    return 42;
+}
+
+void printResult(int x) {
+    write(x);
+    return;
+}
+
+int main() {
+    int n = read();
+    int data[10];
+    int i = 0;
+    while (i < n) {
+        data[i] = read();
+        i = i + 1;
+    }
+
+    // Test multi-param function and nested calls
+    int result = add(multiply(1, 2, 3), add(n, 5));
+    printResult(result);
+
+    // Test array parameter (first dimension omitted)
+    int s = sumArray(data, n);
+    printResult(s);
+
+    // Test 2D array parameter
+    int matrix[2][3] = {{1, 2, 3}, {4, 5, 6}};
+    int elem = getElement(matrix, 0, 2);
+    printResult(elem);
+
+    // Test void function + global variable
+    setGlobal(20);
+    printResult(globalVal);
+
+    // Test no-param function and expression with function call
+    int val = noParam() / add(2, 4);
+    printResult(val);
+
+    return 0;
+}

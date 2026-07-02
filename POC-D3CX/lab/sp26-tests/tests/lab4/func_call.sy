@@ -1,0 +1,11 @@
+// Input: None
+// Output: 10
+
+int f() {
+  return 10;
+}
+
+int main() {
+  write(f());
+  return 0;
+}

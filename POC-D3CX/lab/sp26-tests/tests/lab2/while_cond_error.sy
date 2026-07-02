@@ -1,0 +1,16 @@
+// Return 4 IncompatibleConversion - Semantic Error at Line 9: Array cannot be used as condition expression
+
+int main() {
+    int a = 5;
+    int arr[3];
+    
+    while (arr) {  
+        a = a - 1;
+        if (a == 3) {
+            return 0;  
+        }
+        arr[0] = arr[1];  
+    }
+    
+    return 0;
+}

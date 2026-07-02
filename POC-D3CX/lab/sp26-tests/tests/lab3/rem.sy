@@ -1,0 +1,9 @@
+// Input: None
+// Output: 1
+
+int main(){
+    int a;
+    a = 10;
+    write(a % 3);
+    return 0;
+}

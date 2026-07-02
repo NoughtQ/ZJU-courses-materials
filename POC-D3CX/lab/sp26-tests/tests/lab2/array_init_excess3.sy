@@ -1,0 +1,6 @@
+// Return 3 ExcessInitializers - Semantic Error at line 4: Excess elements in scalar initializer
+
+int main(){
+    int a[2][4] = {1,2,{3,4}};
+    return 0;
+}

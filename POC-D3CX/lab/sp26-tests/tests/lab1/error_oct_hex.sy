@@ -1,0 +1,7 @@
+// Return 1 - Syntax Error Line 4 "0ab" and  Line 5 "0X9abg"
+int main(){
+    int a;
+    a = 0ab;
+    a = 0X9abg;
+    return 0;
+}

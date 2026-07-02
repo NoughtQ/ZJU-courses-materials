@@ -1,0 +1,18 @@
+// Input: 20001
+// Output: 30001 10001 200010000 2 1
+
+int main() {
+    int a, b, c, d, e, f, g;
+    a = read();
+    b = a + 10000;
+    c = a - 10000;
+    d = a * 10000;
+    e = a / 10000;
+    f = a % 10000;
+    write(b);
+    write(c);
+    write(d);
+    write(e);
+    write(f);
+    return 0;
+}

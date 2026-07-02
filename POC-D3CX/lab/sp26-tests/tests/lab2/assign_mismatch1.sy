@@ -1,0 +1,9 @@
+// Return 4 IncompatibleConversion - Semantic Error at Line 7: Assigning to 'int' from incompatible type 'void'
+
+void f() { return; }
+
+int main() {
+  int a[5][5];
+  a[4][2] = f();
+  return 0;
+}

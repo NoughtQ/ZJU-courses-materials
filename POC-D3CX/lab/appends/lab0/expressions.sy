@@ -1,0 +1,45 @@
+// Input: 15 4
+// Output: 19 11 60 3 3 -15 4 1 0 1 0 0 1 1 0 1 1 1 0 29
+
+int main() {
+    int a = read();
+    int b = read();
+
+    // Arithmetic operators: +, -, *, /, %
+    write(a + b);
+    write(a - b);
+    write(a * b);
+    write(a / b);
+    write(a % b);
+
+    // Unary operators: -, +
+    write(-a);
+    write(+b);
+
+    // Relational operators via if-else: >, <, >=, <=
+    if (a > b) write(1); else write(0);
+    if (a < b) write(1); else write(0);
+    if (a >= b) write(1); else write(0);
+    if (a <= b) write(1); else write(0);
+
+    // Equality operators: ==, !=
+    if (a == b) write(1); else write(0);
+    if (a != b) write(1); else write(0);
+
+    // Logical operators: &&, ||
+    if (a > 0 && b > 0) write(1); else write(0);
+    if (a < 0 || b < 0) write(1); else write(0);
+
+    // Unary ! in condition
+    if (!(a - a)) write(1); else write(0);
+    if (!0) write(1); else write(0);
+
+    // Nested || and &&
+    if (a > 10 || b > 10 && a != b) write(1); else write(0);
+    if (a > 100 && b > 100 || a < b) write(1); else write(0);
+
+    // Parenthesized expression to change priority
+    write((a + b) * (a - b) / (a % b + b));
+
+    return 0;
+}

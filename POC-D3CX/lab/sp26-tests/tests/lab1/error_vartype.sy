@@ -1,0 +1,6 @@
+// Return 1 - Syntax Error Line 3: Variable type is not a valid type
+
+void a = 114514;
+int main() {
+    return 0;
+}

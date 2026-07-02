@@ -1,0 +1,5 @@
+// Return 1 - Syntax Error Line 4
+
+int main(){
+  int f = 1.2.2.4;
+}

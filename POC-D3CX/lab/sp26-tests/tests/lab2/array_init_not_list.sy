@@ -1,0 +1,5 @@
+// Return 12 InvalidInitializer - Semantic Error at Line 4: Array initializer must be an initializer list
+
+int main() {
+    int a[10] = 1;
+}

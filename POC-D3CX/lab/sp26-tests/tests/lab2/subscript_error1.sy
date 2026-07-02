@@ -1,0 +1,7 @@
+// Return 6 NotSubscriptable - Semantic Error at Line 5: Subscripting a non-array
+
+int main() {
+    int a = 0;
+    a[3];
+    return 0;
+}

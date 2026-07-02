@@ -1,0 +1,22 @@
+// Input: None
+// Output: 10
+
+int f() {
+    int a = 1;
+    int b[4] = {1, 2, 3, 4};
+    {
+        int b = 3;
+        a = a + b;
+    }
+    {
+        int b[2] = {4, 8};
+        a = a + b[0];
+    }
+    a = a + b[1];
+    return a;
+}
+
+int main() {
+    write(f());
+    return 0;
+}

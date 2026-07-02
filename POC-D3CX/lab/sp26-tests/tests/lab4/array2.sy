@@ -1,0 +1,9 @@
+// Input: None
+// Output: 111
+
+int main() {
+  int a[10][10];
+  a[2][2] = 111;
+  write(a[2][2]);
+  return 0;
+}

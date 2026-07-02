@@ -1,0 +1,12 @@
+int main () {
+	int k = 1;
+	int n = 10;
+	int i = 0;
+	while (i <= n - 1) {
+		i = i + 1;
+		k + 1;
+		k = k + k;
+	}
+	write(k);
+	return 0;
+}

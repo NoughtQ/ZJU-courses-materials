@@ -1,0 +1,8 @@
+// Return 1 - Syntax Error Line 2: Invalid InitVal
+int a = 1,2;
+
+int main() {
+    int b;
+    b=a;
+    return 0;
+}

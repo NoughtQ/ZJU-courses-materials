@@ -1,0 +1,13 @@
+// Return 1 - Syntax Error line 7 and line 11: declaration of ‘array’ as multidimensional array 
+// must have bounds for all dimensions except the first
+int main() {
+    return 0;
+}
+
+int f1(int array[][][2]) {
+    return 0;
+}
+
+int f2(int array[][2][]) {
+    return 0;
+}

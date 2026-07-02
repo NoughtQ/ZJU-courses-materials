@@ -1,0 +1,12 @@
+1. 阅读近2年ACM Multimedia (ACM MM) 顶会论文，领域涵盖：多媒体内容分析与检索、多媒体系统与交互技术等，
+论文链接如下：https://dblp.uni-trier.de/db/conf/mm/mm2025.html
+https://dblp.uni-trier.de/db/conf/mm/mm2024.html
+
+2. 报告要求
+内容结构（建议但不强制）：论文背景与核心问题、研究方法与创新点、实验结果与局限性、你的批判性思考（如方法改进建议、应用场景联想等）；
+【需要结合自己的理解总结论文，直接复制原文内容不给分】
+
+3. 提交格式
+保存为pdf格式，命名为【学号+姓名】，上传至FTP服务器的Paper Reading Report目录下
+
+4. ddl：课程考试结束后一周（与project的ddl一致）

@@ -1,0 +1,12 @@
+int f(int a, int b, int c, int d){
+    return a * b + c - d;
+}
+int main(){
+    int p, q, r;
+    p = 1;
+    q = 2;
+    r = 3;
+    int res=f(p, q, r, 3);
+    write(res);
+    return 0;
+}

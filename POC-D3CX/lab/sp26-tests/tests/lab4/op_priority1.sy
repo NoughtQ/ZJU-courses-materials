@@ -1,0 +1,13 @@
+//Input: None
+//Output: 40
+
+int main(){
+    int a, b, c, d;
+    a = 10;
+    b = 4;
+    c = 2;
+    d = 2;
+    int result = c + a * b - d; 
+    write(result);
+    return 0;
+}

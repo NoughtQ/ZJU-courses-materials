@@ -1,0 +1,19 @@
+// Input: None
+// Output: 5
+
+void test() {
+    int i = 0;
+    ;  
+    while(i < 5) {
+        if(i == 3)
+            i = i + 1;
+        else
+            i = i + 1;
+    }
+    write(i);
+    return;  
+}
+int main() {
+    test();
+    return 0;
+}

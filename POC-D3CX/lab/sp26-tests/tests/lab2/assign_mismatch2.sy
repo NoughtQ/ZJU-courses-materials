@@ -1,0 +1,7 @@
+// Return 4 IncompatibleConversion - Semantic Error at Line 4: Assigning to 'int' from incompatible type 'int[10]'
+int main() {
+  int a[10][10],b[10];
+  a[2][2] = b;
+  write(a[2][2]);
+  return 0;
+}
